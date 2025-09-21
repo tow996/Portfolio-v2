@@ -7,10 +7,18 @@ type TextAreaFieldProps = {
 	placeholder?: string;
 	error?: FieldError;
 	rows?: number;
+	className?: string;
 };
 
-const TextAreaField = ({ placeholder, label, register, error, rows = 6 }: TextAreaFieldProps) => (
-	<div className="input">
+const TextAreaField = ({
+	className,
+	placeholder,
+	label,
+	register,
+	error,
+	rows = 6,
+}: TextAreaFieldProps) => (
+	<div className={`input ${className}`}>
 		<label className="input__label" htmlFor="">
 			{label} {error && <span className="input__error">{error.message}</span>}
 		</label>

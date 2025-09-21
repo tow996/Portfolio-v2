@@ -7,10 +7,18 @@ type InputFieldProps = {
 	type?: string;
 	register: UseFormRegisterReturn;
 	error?: FieldError;
+	className?: string;
 };
 
-const InputField = ({ placeholder, label, type = "text", register, error }: InputFieldProps) => (
-	<div className="input">
+const InputField = ({
+	className,
+	placeholder,
+	label,
+	type = "text",
+	register,
+	error,
+}: InputFieldProps) => (
+	<div className={`input ${className}`}>
 		<label className="input__label">
 			{label}
 			{error && <span className="input__error">{error.message}</span>}

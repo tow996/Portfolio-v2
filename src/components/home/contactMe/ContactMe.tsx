@@ -61,6 +61,7 @@ const ContactMe = () => {
 					label="Your E-Mail*"
 					type="email"
 					placeholder="Enter your e-mail address..."
+					className="animate-on-scroll"
 					register={register("fromEmail", { required: "Your email is required" })}
 					error={errors.fromEmail}
 				/>
@@ -68,17 +69,19 @@ const ContactMe = () => {
 				<InputField
 					label="Subject*"
 					placeholder="What's this about?"
+					className="animate-on-scroll"
 					register={register("subject", { required: "Subject is required" })}
 					error={errors.subject}
 				/>
 
 				<TextAreaField
 					label="Message*"
+					className="animate-on-scroll"
 					placeholder="Write your message here..."
 					register={register("message", { required: "Message is required" })}
 					error={errors.message}
 				/>
-				<div className="contact__submit">
+				<div className="contact__submit animate-on-scroll">
 					<button
 						type="submit"
 						disabled={isSubmitting}

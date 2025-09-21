@@ -1,3 +1,6 @@
+"use client";
+
+import useScrollAnimations from "@/hooks/useScrollAnimations";
 import React from "react";
 import {
 	BiLogoCss3,
@@ -38,9 +41,10 @@ const iconMap: { [key: string]: React.ReactNode } = {
 };
 
 const Project = (project: ProjectProps) => {
+	useScrollAnimations();
 	return (
 		<article
-			className="project"
+			className="project animation-scroll"
 			style={{ "--project-image": `url(${project.image})` } as React.CSSProperties}
 		>
 			<div className="project__tech">
