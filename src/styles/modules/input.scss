@@ -1,0 +1,33 @@
+@use "../mixins" as *;
+
+.input, 
+.textarea {
+    display: grid;
+    padding:0.2rem;
+    &__label {
+        font-size: 1rem;
+        padding:0.2rem 0;
+        @include flex(row, space-between, flex-start);
+    }
+
+    &__box {
+        border: none;
+        font-size: var(--font-size);
+        background-color: var(--nav-bg);
+        border:solid 1px black;
+        width: 100%;
+        padding: 0.75rem;
+        resize:none;
+        box-sizing: border-box;
+        transition:0.2s ease-in-out;
+        outline:none;
+        &:focus {
+            border:solid 1px var(--primary-color);
+        }
+    }
+
+    &__error {
+        color: red;
+        font-size: 0.875rem;
+    }
+}

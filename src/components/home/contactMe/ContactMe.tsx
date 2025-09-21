@@ -48,7 +48,7 @@ const ContactMe = () => {
 			title={content.contactMe.title}
 			description={content.contactMe.description}
 		>
-			<form onSubmit={handleSubmit(onSubmit)}>
+			<form onSubmit={handleSubmit(onSubmit)} className="contact">
 				{/* Honeypot */}
 				<input
 					type="text"
@@ -58,29 +58,37 @@ const ContactMe = () => {
 				/>
 
 				<InputField
-					label="Your Email:"
+					label="Your E-Mail*"
 					type="email"
+					placeholder="Enter your e-mail address..."
 					register={register("fromEmail", { required: "Your email is required" })}
 					error={errors.fromEmail}
 				/>
 
 				<InputField
-					label="Subject:"
+					label="Subject*"
+					placeholder="What's this about?"
 					register={register("subject", { required: "Subject is required" })}
 					error={errors.subject}
 				/>
 
 				<TextAreaField
-					label="Message:"
+					label="Message*"
+					placeholder="Write your message here..."
 					register={register("message", { required: "Message is required" })}
 					error={errors.message}
 				/>
+				<div className="contact__submit">
+					<button
+						type="submit"
+						disabled={isSubmitting}
+						className="contact__submit__button"
+					>
+						{isSubmitting ? "Sending..." : "Send Email"}
+					</button>
 
-				<button type="submit" disabled={isSubmitting}>
-					{isSubmitting ? "Sending..." : "Send Email"}
-				</button>
-
-				{status && <p>{status}</p>}
+					{status && <p className="contact__submit__status">{status}</p>}
+				</div>
 			</form>
 		</Section>
 	);
