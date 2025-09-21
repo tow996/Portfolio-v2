@@ -1,0 +1,15 @@
+@use "../mixins" as *;
+
+footer {
+    @include flex(column, center, center, 0.2rem);
+    > p {
+        font-size: var(--font-size-small);
+        > a {
+            @include flex(row, center, center, 0.5rem);
+            transition:0.3s ease-in-out;
+            &:hover {
+                color:var(--primary-color);
+            }
+        }
+    }
+}

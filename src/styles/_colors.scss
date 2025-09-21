@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light;
+  --heading-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 20%);
+  --text-color-accent: hsl(0, 0%, 40%);
+  --text-color-opposite: hsl(0, 0%, 100%);
+  --primary-color-accent: hsl(220, 59%, 32%);
+  --primary-color: hsl(220, 67%, 47%);
+  --nav-bg: hsl(0, 0%, 98%);
+  --bg-color: hsl(0, 0%, 98%);
+  // Global colors for all screens
+  --button-text-color: hsl(0, 0%, 98%);
+  /* BG Colors */
+  --bg-gradient-start: hsl(195, 20%, 95%);
+  --bg-gradient-mid: hsl(0, 0%, 98%);
+  --bg-gradient-end: hsl(195, 20%, 95%);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  // --primary-color: hsl(195, 85%, 54%);
+  // --primary-color-accent: hsl(195, 85%, 64%);
+  --primary-color-accent: hsl(220, 74%, 58%);
+  --primary-color: hsl(220, 74%, 53%);
+  --heading-color: hsl(0, 0, 90%);
+  --text-color: hsl(0, 0%, 80%);
+  --text-color-accent: hsl(0, 0%, 60%);
+  --text-color-opposite: hsl(0, 0%, 0%);
+  --nav-bg: hsl(210, 10%, 15%);
+  --bg-color: hsl(0, 0%, 8%);
+  
+  /* BG Colors */
+  --bg-gradient-start: hsl(210, 10%, 15%);
+  --bg-gradient-mid: hsl(215, 12%, 10%);
+  --bg-gradient-end: hsl(210, 15%, 12%);
+}

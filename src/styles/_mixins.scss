@@ -1,0 +1,45 @@
+@mixin container($width: 100%, $padding: 1rem) {
+    width: $width;
+    padding: $padding;
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin position($pos, $top: auto, $right: auto, $bottom: auto, $left: auto, $z-index: auto) {
+	position: $pos;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+    z-index: $z-index;
+}
+
+@mixin above-m {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin above-sm {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+@mixin bellow-sm {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin small-height-phones {
+    @media (max-height: 670px) {
+        @content;
+    }
+}

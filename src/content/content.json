@@ -1,0 +1,64 @@
+{
+    "layout": {
+        "footerText": "Developed by Đorđo Glogovac",
+        "footerLink": "View the code"
+    },
+    "landing": {
+        "title": "Đorđo Glogovac",
+        "description": "Full stack developer passionate about building intuitive user experiences and expressive code",
+        "buttonProjects": "Explore My Work",
+        "buttonContact": "Get In Touch"
+    }, 
+    "aboutMe": {
+        "title": "About Me",
+        "description": "Hi, I'm Đorđo Glogovac, an entry-level developer passionate about building full-stack applications. I love working with TypeScript, JavaScript, and Python, and enjoy bringing ideas to life from backend to frontend. I'm always eager to learn, improve my skills, and collaborate on meaningful projects.",
+        "technologies": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "HTML5", "CSS3", "Sass", "Git", "GitHub"]
+    },
+    "projects": {
+        "title": "Projects",
+        "description": "Here are some of my projects",
+        "projectsData": [
+            {
+                "title": "T2 Trials",
+                "description": "Website used for managing most popular Master Duel Yu-Gi-Oh! 3v3 League. Used by over 1000 players!",
+                "technologies": ["html", "css", "javascript", "django"],
+                "image": "/t2trials_project.png",
+                "links": {
+                    "live": "https://t2trials.com/"
+                }
+            },
+            {
+                "title": "My Portfolio",
+                "description": "My personal portfolio website that you are on now. It is also fully open source!",
+                "image": "/portfolio_project.png",
+                "technologies": ["typescript", "next", "sass"],
+                "links": {
+                    "github": "http://example.com",
+                    "live": "http://example.com"
+                }
+            },
+            {
+                "title": "Computer Store",
+                "description": "My first e-commerce project for imaginary computer store. Made as final project for course that I went to.",
+                "image": "/pc_store_project.png",
+                "technologies": ["typescript", "react", "sass", "django"],
+                "links": {
+                    "github": "http://example.com",
+                    "live": "http://example.com"
+                }
+            },
+            {
+                "title": "Image Optimizer",
+                "description": "Free software project I'm currently working on for optimizing images.",
+                "image": "/imgconverter_project.png",
+                "technologies": ["typescript", "next", "sass"],
+                "links": {
+                }
+            }
+        ]
+    },
+    "contactMe": {
+        "title": "Contact Me",
+        "description": ""
+    }
+}

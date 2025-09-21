@@ -1,0 +1,29 @@
+@use "../mixins" as *;
+
+.navControl {
+	cursor: pointer;
+	margin-left:auto;
+	.bar {
+		height: 2px;
+		width: 27px;
+		margin: 5px;
+		background-color: var(--text-color);
+		transition: all 0.3s ease-in-out;
+	}
+
+	&.open {
+		.bar:nth-child(1) {
+			transform: rotate(45deg) translate(5px, 5px);
+		}
+		.bar:nth-child(2) {
+			opacity: 0;
+		}
+		.bar:nth-child(3) {
+			transform: rotate(-45deg) translate(5px, -5px);
+		}
+	}
+
+	@include above-sm {
+		display: none;
+	}
+}
