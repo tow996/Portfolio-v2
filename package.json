@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-email/render": "^1.2.3",
+    "@vercel/speed-insights": "^1.2.0",
     "motion": "^12.23.15",
     "next": "15.5.3",
     "next-themes": "^0.4.6",
@@ -28,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
+    "eslint-config-prettier": "^10.1.8",
     "sass": "^1.92.1",
     "typescript": "^5"
   }

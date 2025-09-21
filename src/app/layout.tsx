@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { ThemeProvider } from "next-themes";
 import { Jost, Joti_One } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const jost = Jost({ subsets: ["latin"], variable: "--font-jost" });
 const joti = Joti_One({ subsets: ["latin"], variable: "--font-joti-one", weight: "400" });
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					{children}
 					<Footer />
 				</ThemeProvider>
+				<SpeedInsights />
 			</body>
 		</html>
 	);
