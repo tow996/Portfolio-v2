@@ -10,7 +10,7 @@ const Projects = () => {
 			title={content.projects.title}
 			description={content.projects.description}
 		>
-			<div className="projects padding-24">
+			<div className="projects">
 				{content.projects.projectsData.map((project, index) => (
 					<Project key={index} {...project} />
 				))}

@@ -1,17 +1,18 @@
 {
     "layout": {
         "footerText": "Developed by Đorđo Glogovac",
-        "footerLink": "View the code"
+        "footerLink": "View the code",
+        "footerUrl": "https://github.com/tow996/Portfolio-v2"
     },
     "landing": {
         "title": "Đorđo Glogovac",
-        "description": "Full stack developer passionate about building intuitive user experiences and expressive code",
+        "description": "Full stack developer who specializes in TypeScript & Python",
         "buttonProjects": "Explore My Work",
         "buttonContact": "Get In Touch"
     }, 
     "aboutMe": {
         "title": "About Me",
-        "description": "Hi, I'm Đorđo Glogovac, an entry-level developer passionate about building full-stack applications. I love working with TypeScript, JavaScript, and Python, and enjoy bringing ideas to life from backend to frontend. I'm always eager to learn, improve my skills, and collaborate on meaningful projects.",
+        "description": "Hi, I'm Đorđo Glogovac, a junior developer with experience in building full-stack applications. I mainly work with React, TypeScript, SASS, and Python. I enjoy developing both backend and frontend features. I'm focused on improving my skills and contributing to practical, well-built projects.",
         "technologies": ["JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express", "MongoDB", "PostgreSQL", "HTML5", "CSS3", "Sass", "Git", "GitHub"]
     },
     "projects": {
@@ -33,8 +34,8 @@
                 "image": "/portfolio_project.png",
                 "technologies": ["typescript", "next", "sass"],
                 "links": {
-                    "github": "http://example.com",
-                    "live": "http://example.com"
+                    "github": "https://github.com/tow996/Portfolio-v2",
+                    "live": "https://www.djordjoglogovac.com/"
                 }
             },
             {
@@ -43,8 +44,7 @@
                 "image": "/pc_store_project.png",
                 "technologies": ["typescript", "react", "sass", "django"],
                 "links": {
-                    "github": "http://example.com",
-                    "live": "http://example.com"
+                    "github": "https://github.com/tow996/Computer-Store-"
                 }
             },
             {
@@ -53,6 +53,7 @@
                 "image": "/imgconverter_project.png",
                 "technologies": ["typescript", "next", "sass"],
                 "links": {
+                    
                 }
             }
         ]

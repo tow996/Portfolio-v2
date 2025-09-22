@@ -7,7 +7,7 @@ const Footer = () => {
 		<footer className="padding-24">
 			<p>{content.layout.footerText}</p>
 			<p>
-				<a href="">
+				<a href={content.layout.footerUrl} target="_blank" rel="noopener noreferrer">
 					{content.layout.footerLink} <FaGithub></FaGithub>
 				</a>
 			</p>
