@@ -1,0 +1,19 @@
+@use "../mixins" as *;
+
+.contact-buttons {
+    @include position(fixed, $top: calc(50% - 3rem), $right:1rem);
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    z-index:1000;
+    > svg {
+        width:2rem;
+        height:2rem;
+        transition:0.3s ease-in-out;
+        cursor:pointer;
+        &:hover {
+            color:var(--primary-color);
+        }
+    }
+}
+

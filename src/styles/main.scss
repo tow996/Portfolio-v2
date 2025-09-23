@@ -4,3 +4,20 @@
 @forward "./typography";
 @forward "./modules/index";
 @forward "./layout/index";
+
+.fixed-buttons {
+  position: fixed;
+  top: 40%;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 1000;
+}
+
+.inline-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+    

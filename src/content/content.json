@@ -7,8 +7,7 @@
     "landing": {
         "title": "Đorđo Glogovac",
         "description": "Full stack developer who specializes in TypeScript & Python",
-        "buttonProjects": "Explore My Work",
-        "buttonContact": "Get In Touch"
+        "buttonProjects": "Explore My Work"
     }, 
     "aboutMe": {
         "title": "About Me",

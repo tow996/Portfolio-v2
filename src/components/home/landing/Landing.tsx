@@ -12,12 +12,11 @@ const Landing = () => {
 					</p>
 					<div className="landing__buttons">
 						<a href="#projects">{content.landing.buttonProjects}</a>
-						<a href="#projects">{content.landing.buttonContact}</a>
 					</div>
 				</div>
-				<div className="scroll_down">
+				{/* <div className="scroll_down">
 					<div className="scroll_down__mouse"></div>
-				</div>
+				</div> */}
 			</section>
 		</div>
 	);
