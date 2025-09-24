@@ -7,10 +7,11 @@ interface SectionProps {
 	title: string;
 	description: string;
 	children: React.ReactNode;
+	treshold?: number;
 }
 
-const Section = ({ id, title, description, children }: SectionProps) => {
-	useScrollAnimations();
+const Section = ({ id, title, description, children, treshold }: SectionProps) => {
+	useScrollAnimations(treshold ?? treshold);
 
 	return (
 		<section className="section animate-on-scroll" id={id}>

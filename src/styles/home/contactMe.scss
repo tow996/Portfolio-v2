@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-
+    
     &__submit {
         @include flex(row, space-between, flex-start);
         padding:0.25rem;

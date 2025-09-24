@@ -24,6 +24,12 @@
         &:focus {
             border:solid 1px var(--primary-color);
         }
+        &:disabled {
+            background-color: var(--disabled-input-bg);
+            color:var(--text-color-accent);
+            pointer-events: none;
+            user-select: text;
+        }
     }
 
     &__error {

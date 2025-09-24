@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useScrollAnimations = () => {
+const useScrollAnimations = (threshold: number = 0.2) => {
 	useEffect(() => {
 		const observer = new IntersectionObserver(
 			(entries) => {
@@ -13,7 +13,7 @@ const useScrollAnimations = () => {
 				});
 			},
 			{
-				threshold: 0.2,
+				threshold: threshold,
 			},
 		);
 

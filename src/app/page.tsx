@@ -3,7 +3,6 @@ import Landing from "@/components/home/landing/Landing";
 import Projects from "@/components/home/projects/Projects";
 import React from "react";
 import "@/styles/home/_index.scss";
-import ContactMe from "@/components/home/contactMe/ContactMe";
 
 const Home = () => {
 	return (
@@ -11,7 +10,6 @@ const Home = () => {
 			<Landing />
 			<AboutMe />
 			<Projects />
-			<ContactMe />
 		</main>
 	);
 };

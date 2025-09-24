@@ -1,0 +1,62 @@
+@use "../mixins" as *;
+
+.contact-modal {
+    &__backdrop {
+        @include position(fixed, 0, 0, 0, 0, 9999);
+        @include flex(row, center, center);
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+
+        &.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        &.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &__content {
+        background-color: var(--bg-color);
+        @include container(90%, 1.5rem);
+        max-width: 600px;
+        max-height: 90vh;
+        overflow-y: auto;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
+        &.modal-fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &.modal-fade-out {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+    }
+
+    &__close {
+        @include position(absolute, 0.5rem, 1rem, auto, auto);
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-color-accent);
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: var(--text-color);
+        }
+    }
+}

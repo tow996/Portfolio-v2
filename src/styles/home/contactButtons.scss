@@ -1,19 +1,46 @@
 @use "../mixins" as *;
 
 .contact-buttons {
-    @include position(fixed, $top: calc(50% - 3rem), $right:1rem);
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-    z-index:1000;
-    > svg {
-        width:2rem;
-        height:2rem;
-        transition:0.3s ease-in-out;
-        cursor:pointer;
+    // @include flex(row, center, center, $gap:0.5rem);
+    text-align: center;
+    margin-top:1rem;
+    svg {
+        margin-inline: 0.5rem;
+    }
+}
+
+.contact-buttons, .fixed-buttons {
+    svg {
+        width: 2.5rem;
+        height: 2.5rem;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
         &:hover {
-            color:var(--primary-color);
+            color: var(--primary-color);
+            transform:scale(1.1);
         }
     }
 }
 
+.fixed-buttons {
+    position: fixed;
+    z-index: 1000;
+    transition: transform 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-10rem) scale(0);
+    max-width:5rem;
+    right:0;
+}
+
+.fixed-buttons.visible {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.fixed-buttons.invisible {
+    transform: translateX(-10rem) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -45,9 +45,6 @@ const Header = () => {
 				<a href="#projects" onClick={closeNav}>
 					Projects
 				</a>
-				<a href="#contact" onClick={closeNav}>
-					Contact
-				</a>
 				<a href="/resume.pdf" id="resume" target="_blank">
 					Resume
 				</a>
