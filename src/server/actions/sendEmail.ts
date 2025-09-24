@@ -41,8 +41,8 @@ export async function sendEmail(values: {
 
 	try {
 		const response = await resend.emails.send({
-			from: "onboarding@resend.dev", // or use a verified sender
-			to: "your@email.com", // <-- your personal email
+			from: "onboarding@resend.dev",
+			to: "djordjo.glogovac96@gmail.com",
 			replyTo: values.fromEmail,
 			subject: values.subject,
 			html: `<p>${values.message}</p><p>From: ${values.fromEmail}</p>`,

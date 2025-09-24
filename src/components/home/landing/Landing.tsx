@@ -1,11 +1,13 @@
 import React from "react";
 import content from "@/content/content.json";
 import ContactButtons from "../contactButtons/ContactButtons";
+import BackgroundParticles from "./BackgroundParticles";
 
 const Landing = () => {
 	return (
 		<>
 			<div className="landing__wrapper">
+				<BackgroundParticles />
 				<section id="landing" className="section landing">
 					<div className="landing__content">
 						<h1 className="landing__title section__title">{content.landing.title}</h1>
