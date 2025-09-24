@@ -41,7 +41,7 @@ export async function sendEmail(values: {
 
 	try {
 		const response = await resend.emails.send({
-			from: "onboarding@resend.dev",
+			from: "noreply@djordjoglogovac.com",
 			to: "djordjo.glogovac96@gmail.com",
 			replyTo: values.fromEmail,
 			subject: values.subject,
