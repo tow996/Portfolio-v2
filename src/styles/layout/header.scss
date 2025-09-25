@@ -61,7 +61,7 @@ header {
             height: auto;
             width: auto;
 
-            a {
+            a, span {
                 font-size: var(--font-size);
                 transition: 0.3s ease;
                 @include flex(row, center, center);
@@ -78,7 +78,7 @@ header {
     }
     #resume {
         background-color: var(--primary-color);
-        color: var(--text-color-opposite);
+        color:var(--button-text-color);
         padding:0.2rem 0.4rem;
         border-radius:10px;
         &:hover {

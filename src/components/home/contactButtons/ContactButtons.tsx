@@ -27,14 +27,14 @@ const ContactButtons = () => {
 	return (
 		<>
 			<div className="contact-buttons" ref={buttonsRef}>
-				<a href="https://github.com/tow996" target="_blank">
+				<a href="https://github.com/tow996" target="_blank" aria-label="My GitHub Link">
 					<BiLogoGithub />
 				</a>
 				<IoIosMail onClick={() => setIsModalOpen(true)} />
 			</div>
 
 			<div className={`fixed-buttons ${isVisible ? "visible" : "invisible"}`}>
-				<a href="https://github.com/tow996" target="_blank">
+				<a href="https://github.com/tow996" target="_blank" aria-label="My GitHub Link">
 					<BiLogoGithub />
 				</a>
 				<IoIosMail onClick={() => setIsModalOpen(true)} />

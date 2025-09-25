@@ -14,7 +14,7 @@ type FormValues = {
 };
 
 const ContactMe = () => {
-	const {	
+	const {
 		register,
 		handleSubmit,
 		reset,
@@ -29,14 +29,14 @@ const ContactMe = () => {
 		const result = await sendEmail(data);
 
 		if (result.success) {
-			setStatus("Email sent successfully.");
+			setStatus("Email sent successfully");
 			reset();
 		} else {
 			const error =
 				typeof result.error === "object" && "general" in result.error
 					? result.error.general?.[0]
-					: "Failed to send email.";
-			setStatus(error || "Failed to send email.");
+					: "Failed to send email";
+			setStatus(error || "Failed to send email");
 		}
 	};
 
@@ -66,6 +66,7 @@ const ContactMe = () => {
 			<InputField
 				label="Your E-Mail*"
 				type="email"
+				name="fromEmail"
 				placeholder="Enter your e-mail address..."
 				register={register("fromEmail", { required: "Your email is required" })}
 				error={errors.fromEmail}
@@ -73,6 +74,7 @@ const ContactMe = () => {
 
 			<InputField
 				label="Subject*"
+				name="subject"
 				placeholder="What's this about?"
 				register={register("subject", { required: "Subject is required" })}
 				error={errors.subject}
@@ -83,6 +85,7 @@ const ContactMe = () => {
 				placeholder="Write your message here..."
 				register={register("message", { required: "Message is required" })}
 				error={errors.message}
+				name="message"
 			/>
 
 			<div className="contact__submit">

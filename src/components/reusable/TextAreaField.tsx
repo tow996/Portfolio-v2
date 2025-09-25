@@ -8,6 +8,7 @@ type TextAreaFieldProps = {
 	error?: FieldError;
 	rows?: number;
 	className?: string;
+	name?: string;
 };
 
 const TextAreaField = ({
@@ -16,13 +17,20 @@ const TextAreaField = ({
 	label,
 	register,
 	error,
+	name,
 	rows = 6,
 }: TextAreaFieldProps) => (
 	<div className={`input ${className}`}>
-		<label className="input__label" htmlFor="">
+		<label className="input__label" htmlFor={`id-${name}`}>
 			{label} {error && <span className="input__error">{error.message}</span>}
 		</label>
-		<textarea rows={rows} {...register} className="input__box" placeholder={placeholder} />
+		<textarea
+			id={`id-${name}`}
+			rows={rows}
+			{...register}
+			className="input__box"
+			placeholder={placeholder}
+		/>
 	</div>
 );
 

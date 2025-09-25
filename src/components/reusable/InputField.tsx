@@ -3,6 +3,7 @@ import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 type InputFieldProps = {
 	label: string;
+	name?: string;
 	placeholder?: string;
 	type?: string;
 	register?: UseFormRegisterReturn;
@@ -14,6 +15,7 @@ type InputFieldProps = {
 
 const InputField = ({
 	className,
+	name,
 	placeholder,
 	label,
 	type = "text",
@@ -23,12 +25,13 @@ const InputField = ({
 	value,
 }: InputFieldProps) => (
 	<div className={`input ${className}`}>
-		<label className="input__label">
+		<label className="input__label" htmlFor={`id-${name}`}>
 			{label}
 			{error && <span className="input__error">{error.message}</span>}
 		</label>
 		<input
 			value={value}
+			id={`id-${name}`}
 			type={type}
 			{...register}
 			className="input__box"

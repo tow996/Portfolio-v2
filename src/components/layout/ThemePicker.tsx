@@ -14,12 +14,12 @@ const ThemeToggle = () => {
 	if (!mounted) return null;
 
 	return (
-		<a
+		<span
 			onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
 			aria-label="Toggle Theme"
 		>
 			{resolvedTheme !== "dark" ? <MdSunny /> : <IoMoon />}
-		</a>
+		</span>
 	);
 };
 
