@@ -11,8 +11,6 @@ body {
   color: var(--text-color);
 }
 
-
-
 ::-webkit-scrollbar {
   width: 0.5rem;            
 }
@@ -29,6 +27,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-color-opposit);       
+    background: var(--text-color-opposit);       
 }
 

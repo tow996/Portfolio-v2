@@ -26,26 +26,35 @@ const Header = () => {
 		};
 
 		window.addEventListener("scroll", handleScroll);
+
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	}, []);
 
 	return (
+		// Changed tag selector 'header' to BEM class 'header'
 		<header
-			className={` ${isNavOpen ? "nav-open" : ""} ${hasScrolled ? "scrolled padding-24" : "padding-48"}`}
+			className={`
+                header 
+                ${isNavOpen ? "nav-open" : ""} 
+                ${hasScrolled ? "scrolled padding-24" : "padding-48"}
+            `}
 		>
-			<p id="logo">
+			{/* Changed id="logo" to className="header__logo" */}
+			<p className="header__logo">
 				<img src="/logo.png" alt="ĐG Logo" />
 			</p>
-			<nav>
+			{/* Changed tag selector 'nav' to BEM class 'header__nav' */}
+			<nav className="header__nav">
 				<a href="#about" onClick={closeNav}>
 					About
 				</a>
 				<a href="#projects" onClick={closeNav}>
 					Projects
 				</a>
-				<a href="/resume.pdf" id="resume" target="_blank">
+				{/* Changed id="resume" to className="header__resume" */}
+				<a href="/resume.pdf" className="header__resume" target="_blank">
 					Resume
 				</a>
 				<ThemePicker />

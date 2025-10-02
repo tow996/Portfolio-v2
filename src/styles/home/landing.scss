@@ -1,7 +1,7 @@
 @use "../mixins" as *;
 
 .landing__wrapper {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1030%26quot%3b)' fill='none'%3e%3cpath d='M93 1080L1173 0L1917 0L837 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1031%26quot%3b)'%3e%3c/path%3e%3cpath d='M649.6 1080L1729.6 0L2049.1 0L969.1 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1031%26quot%3b)'%3e%3c/path%3e%3cpath d='M1816 1080L736 0L20.5 0L1100.5 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1032%26quot%3b)'%3e%3c/path%3e%3cpath d='M1281.4 1080L201.4000000000001 0L-65.59999999999991 0L1014.4000000000001 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1032%26quot%3b)'%3e%3c/path%3e%3cpath d='M962.6524830984382 1080L1920 122.65248309843821L1920 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1031%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 1080L957.3475169015618 1080L 0 122.65248309843821z' fill='url(%26quot%3b%23SvgjsLinearGradient1032%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1030'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1031'%3e%3cstop stop-color='rgba(60%2c 62%2c 65%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(60%2c 62%2c 65%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1032'%3e%3cstop stop-color='rgba(60%2c 62%2c 65%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(60%2c 62%2c 65%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+    background-image: url("/bglight.webp");
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
@@ -9,7 +9,12 @@
 
 [data-theme="dark"] {
     .landing__wrapper {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1033%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(22%2c 25%2c 29%2c 1)'%3e%3c/rect%3e%3cpath d='M126 1080L1206 0L2002.5 0L922.5 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1034%26quot%3b)'%3e%3c/path%3e%3cpath d='M657.6 1080L1737.6 0L2445.6 0L1365.6 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1034%26quot%3b)'%3e%3c/path%3e%3cpath d='M1908 1080L828 0L687 0L1767 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1035%26quot%3b)'%3e%3c/path%3e%3cpath d='M1269.4 1080L189.4000000000001 0L-523.0999999999999 0L556.9000000000001 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1035%26quot%3b)'%3e%3c/path%3e%3cpath d='M1161.6122892515527 1080L1920 321.61228925155274L1920 1080z' fill='url(%26quot%3b%23SvgjsLinearGradient1034%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 1080L758.3877107484473 1080L 0 321.61228925155274z' fill='url(%26quot%3b%23SvgjsLinearGradient1035%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1033'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1034'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1035'%3e%3cstop stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(15%2c 70%2c 185%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+        background-image: url("/bgdark.jpg");    
+    }
+    .landing {
+        &__title {
+            color:white;
+        }
     }
 }
 
@@ -19,8 +24,8 @@
     @include flex(column, center, center, 5rem);
     &__title {
         margin-bottom:1rem;
-        color:var(--primary-color);
         text-transform: uppercase;
+        text-align: center; 
     }
     &__description {
         color: var(--text-color);

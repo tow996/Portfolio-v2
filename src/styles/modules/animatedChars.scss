@@ -1,0 +1,47 @@
+$duration: 1s; 
+$ease: cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+
+@keyframes slide-up-in {
+    0% {
+        opacity: 0;
+        transform: translateY(1.2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.char,
+.char-2 {
+    display: inline-block;
+    opacity: 0; 
+    transform: translateY(1.2em); 
+}
+
+.char.space {
+    width: 0.3em; 
+    transform: none; 
+    opacity: 1; 
+}
+
+
+.char {
+    animation: slide-up-in $duration $ease forwards;
+}
+
+.char-2 {
+    animation: slide-down-in $duration $ease forwards;
+}
+

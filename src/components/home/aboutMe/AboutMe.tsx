@@ -19,8 +19,12 @@ import Section from "@/components/reusable/Section";
 
 const AboutMe = () => {
 	return (
-		<Section id="about" title={content.aboutMe.title} description={content.aboutMe.description}>
-			<div className="about-languages">
+		<Section
+			id="about-me"
+			title={content.aboutMe.title}
+			description={content.aboutMe.description}
+		>
+			<div className="about-me__languages">
 				<BiLogoJavascript />
 				<BiLogoTypescript />
 				<RiNextjsFill />
