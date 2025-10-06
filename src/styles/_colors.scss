@@ -1,16 +1,17 @@
 :root {
   color-scheme: light;
   --heading-color: hsl(0, 0%, 15%);
+  --text-color-max: hsl(0, 0%, 0%);
   --text-color: hsl(0, 0%, 20%);
   --text-color-accent: hsl(0, 0%, 40%);
   --text-color-opposite: hsl(0, 0%, 100%);
-  --primary-color-accent: hsl(220, 59%, 32%);
-  --primary-color: hsl(220, 67%, 47%);
+  --primary-color-accent: hsl(204, 100%, 40%);
+  --primary-color:hsl(204, 100%, 50%);
   --nav-bg: hsl(0, 0%, 98%);
   --bg-color: hsl(0, 0%, 98%);
   --disabled-input-bg: hsl(0, 0%, 88%);
   // Global colors for all screens
-  --button-text-color:  hsl(0, 0%, 95%);
+  --button-text-color:  hsl(0, 0%, 100%);
   /* BG Colors */
   --bg-gradient-start: hsl(195, 20%, 95%);
   --bg-gradient-mid: hsl(0, 0%, 98%);
@@ -21,10 +22,11 @@
   color-scheme: dark;
   // --primary-color: hsl(195, 85%, 54%);
   // --primary-color-accent: hsl(195, 85%, 64%);
-  --primary-color-accent: hsl(220, 74%, 58%);
-  --primary-color: hsl(220, 74%, 53%);
+  --primary-color-accent: hsl(224, 75%, 37%);
+  --primary-color: hsl(224, 75%, 47%);
   --heading-color: hsl(0, 0, 90%);
-  --text-color: hsl(0, 0%, 80%);
+  --text-color-max: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 90%);
   --text-color-accent: hsl(0, 0%, 60%);
   --text-color-opposite: hsl(0, 0%, 0%);
   --nav-bg: hsl(210, 10%, 15%);

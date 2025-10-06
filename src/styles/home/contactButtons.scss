@@ -16,7 +16,7 @@
         transition: 0.3s ease-in-out;
         cursor: pointer;
         &:hover {
-            color: var(--primary-color);
+            color: var(--text-color-max);
             transform:scale(1.1);
         }
     }

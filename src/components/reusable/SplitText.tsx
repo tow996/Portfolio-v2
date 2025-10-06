@@ -3,25 +3,33 @@
 import React, { useEffect, useRef } from "react";
 import type { ElementType } from "react";
 
-// This function splits strings to multiple spans
-const splitToSpans = (text: string): string => {
+// Function to split text into word and character spans
+const splitToSpans = (text: string, delayStep: number): string => {
 	const parts = text.split(/(\s+)/);
 	let wordCount = 0;
+	let charDelay = 0;
 
 	return parts
 		.map((part) => {
 			if (/^\s+$/.test(part)) {
 				return `<span class="char space">${"&nbsp;".repeat(part.length)}</span>`;
 			}
-			const className = wordCount % 2 === 0 ? "char" : "char-2";
+
+			const wordClass = wordCount % 2 === 0 ? "word" : "word-2";
+			const charClass = wordCount % 2 === 0 ? "char" : "char-2";
 			wordCount++;
-			return part
+
+			const wordContent = part
 				.split("")
-				.map(
-					(char, charIndex) =>
-						`<span class="${className}" style="animation-delay: ${charIndex * 30}ms;">${char}</span>`,
-				)
+				.map((char) => {
+					const charSpan = `<span class="${charClass}" style="animation-delay: ${charDelay}ms;">${char}</span>`;
+					charDelay += delayStep;
+					return charSpan;
+				})
 				.join("");
+
+			// The 'display: inline-block;' style is crucial for correct layout
+			return `<span class="${wordClass}" style="display: inline-block;">${wordContent}</span>`;
 		})
 		.join("");
 };
@@ -43,11 +51,21 @@ const SplitText: React.FC<SplitTextProps> = ({
 
 	useEffect(() => {
 		if (elementRef.current) {
-			elementRef.current.innerHTML = splitToSpans(text);
+			// Pass delayStep to correctly calculate animation delays
+			elementRef.current.innerHTML = splitToSpans(text, delayStep);
 		}
 	}, [text, delayStep]);
 
-	return <Tag ref={elementRef} className={className} aria-label={text} />;
+	// Added a minimal inline style to the main container just in case
+	// it helps with flow, but the SCSS word styles are the primary fix.
+	return (
+		<Tag
+			ref={elementRef}
+			className={className}
+			aria-label={text}
+			style={{ display: "block" }}
+		/>
+	);
 };
 
 export default SplitText;

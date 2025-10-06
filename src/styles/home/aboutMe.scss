@@ -2,7 +2,7 @@
 
 .about-me { 
     p { // Styling for paragraphs inside the block
-        text-align: center;
+        text-align: center !important;
     }
     
     &__languages { 

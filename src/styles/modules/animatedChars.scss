@@ -1,5 +1,5 @@
-$duration: 1s; 
-$ease: cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+$duration: 1s;
+$ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 @keyframes slide-up-in {
     0% {
@@ -23,25 +23,36 @@ $ease: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 }
 
+// 1. Word Containers: Critical for preventing line breaks within words
+.word,
+.word-2 {
+    display: inline-block;
+    white-space: nowrap; // Keeps the word on one line
+}
+
+// 2. Character Base Styles: Apply to chars nested inside word containers
 .char,
 .char-2 {
     display: inline-block;
-    opacity: 0; 
-    transform: translateY(1.2em); 
+    // Initial state before animation starts
+    opacity: 0;
+    transform: translateY(1.2em); // Start state for slide-up-in
 }
 
+// 3. Space Character Style
 .char.space {
-    width: 0.3em; 
-    transform: none; 
-    opacity: 1; 
+    width: 0.3em;
+    opacity: 1;
+    transform: none; // Spaces don't need to animate
 }
 
-
-.char {
+// 4. Animation Application
+.word .char {
     animation: slide-up-in $duration $ease forwards;
 }
 
-.char-2 {
+.word-2 .char-2 {
+    // Override initial transform set on .char/.char-2 for slide-down-in
+    transform: translateY(-1.2em);
     animation: slide-down-in $duration $ease forwards;
 }
-

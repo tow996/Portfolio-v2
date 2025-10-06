@@ -3,28 +3,28 @@
 }
 
 .circle-container {
-  $particleNum: 200;
-  $particleColor: hsl(180, 100%, 80%);
-
-  position: absolute;
-  transform: translateY(-10vh);
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    $particleNum: 200;
+    $particleColor: hsl(180, 100%, 80%);
+    position: absolute;
+    transform: translateY(-10vh);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
   .circle {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        mix-blend-mode: screen;
-        background-image: radial-gradient(
-        hsl(0, 0%, 100%),
-        hsl(0, 0%, 80%) 10%,
-        hsla(180, 100%, 80%, 0) 56%
-        );
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow:hidden;
+    mix-blend-mode: screen;
+    background-image: radial-gradient(
+    hsl(0, 0%, 100%),
+    hsl(0, 0%, 80%) 10%,
+    hsla(180, 100%, 80%, 0) 56%
+    );
 
-        animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 
-        @keyframes fade-frames {
+    @keyframes fade-frames {
         0% {
             opacity: 1;
         }
@@ -36,9 +36,9 @@
         100% {
             opacity: 1;
         }
-        }
+    }
 
-        @keyframes scale-frames {
+    @keyframes scale-frames {
         0% {
             transform: scale3d(0.4, 0.4, 1);
         }
@@ -50,8 +50,8 @@
         100% {
             transform: scale3d(0.4, 0.4, 1);
         }
-        }
     }
+}
 
     $particleBaseSize: 8;
 

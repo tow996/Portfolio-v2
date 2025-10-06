@@ -19,9 +19,10 @@ interface ProjectProps {
 	description: string;
 	technologies: string[];
 	image: string;
-	links: {
-		[key: string]: string | undefined;
-	};
+	index: number;
+	links: { [key: string]: string | undefined };
+	expanded: boolean;
+	onExpand: (index: number) => void;
 }
 
 const iconMap: { [key: string]: React.ReactNode } = {
@@ -42,10 +43,12 @@ const iconMap: { [key: string]: React.ReactNode } = {
 
 const Project = (project: ProjectProps) => {
 	useScrollAnimations();
+
 	return (
 		<article
-			className="project animation-scroll"
+			className={`project animation-scroll ${project.expanded ? "project__expanded" : ""}`}
 			style={{ "--project-image": `url(${project.image})` } as React.CSSProperties}
+			onClick={() => project.onExpand(project.index)}
 		>
 			<div className="project__tech">
 				{project.technologies.map((tech, index) => (
